@@ -2,7 +2,7 @@
 'use strict';
 
 // ==== ВСТАВЬТЕ СВОЮ ССЫЛКУ НА mods.zip ====
-const DOWNLOAD_URL = "https://github.com/Nexusmods877/Installs/releases/download/1/release.zip";
+const DOWNLOAD_URL = "https://github.com/Nexusmods877/Installs/releases/download/2/release.zip";
 const DOWNLOAD_FILENAME = "mods.zip";
 
 // ========== ОСНОВНОЙ КОД (НЕ ТРОГАТЬ) ==========
